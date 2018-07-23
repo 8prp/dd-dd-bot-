@@ -1,22 +1,69 @@
 const Discord = require('discord.js');
-const A7MD = new Discord.Client();
+const client = new Discord.Client();
+ const prefix = "!";
+client.on('ready', () => {
+    console.log('I am ready!');
+});
 
-console.log("BOT ONLINE");
- 
-A7MD.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
+client.on('message', message => {
+    if (message.content === 'zg') {
+        message.reply('pong');
+      }
+});
 
-كل الاكواد الي تبيها و عندنا مانع نشر و مانع جحفله 
-الي يخطر ببالك 
-افضل سيرفر برمجه عربي . 
- تعال وصير مبرمج   :kissing_heart:, !
-و آتحدآك مآ يعجبك :wink:, !
-رآبط آلسيرفر:arrow_down_small::arrow_down_small::arrow_down_small:
-( Codes Official :revolving_hearts: )
-[ https://discord.gg/6MedSh3 ] [ ${member}  ]
-**`) 
-}).catch(console.error)
-})
+
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+
+
+client.on('ready', () => {
+     client.user.setActivity("عالم دآڤينشي",{type: 'WATCHING'});
+
+});
+  
+
+
+
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === '....') {
+              message.channel.send('#credit');
+              message.channel.sendFile("./photoshop.PNG");
+               
+
+            }
+});
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === '..') {
+              message.channel.send('t!rep <@381487291207647245>');
+              message.channel.sendFile("./photoshop.PNG");
+               
+
+            }
+});
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === '..') {
+              message.channel.send('#rep <@381487291207647245>');
+              message.channel.sendFile("./photoshop.PNG");
+               
+
+            }
+});
 client.login(process.env.BOT_TOKEN);
